@@ -1,0 +1,65 @@
+/* Set the overall page font and spacing */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    margin: 30px;
+    line-height: 1.5;
+}
+
+/* Give the page header a simple accent color*/
+.top-heading {
+    color: rgb(0, 0, 255);
+}
+
+/* Remove top/bottom spacing*/
+h1 {
+    margin: 0;
+}
+
+/* Add a little space below section headings before the content starts. */
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Style the short subtitle under the main name. */
+.title {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Size and shape the main profile photo */
+.profile-image {
+    max-width: 150px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Use smaller icons for social links and separate them horizontally. */
+.small-image {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+/* Add vertical space between sections. */
+hr {
+    margin: 25px 0;
+}
+
+/* Indent list items for readability */
+ul {
+    padding-left: 22px;
+}
+
+/* Add consistent spacing  */
+p {
+    margin-bottom: 12px;
+}
+
+.edu-detail {
+    margin-left: 24px;
+}
+
+.fun-link {
+    margin-top: 16px;
+}

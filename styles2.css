@@ -1,0 +1,149 @@
+/* Basic page look and spacing */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #eef1f4;
+	margin: 0;
+	padding: 20px;
+	color: #1f2933;
+}
+
+/* Keeps the page not too wide */
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+/* Gives the headings a shared color */
+h1,
+h2 {
+	color: #1d3557;
+}
+
+/* Uses flexbox to place the two main sections side by side */
+.layout {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	margin-top: 20px;
+	align-items: flex-start;
+}
+
+/* Styles each content box */
+.section {
+	flex: 1 1 400px;
+	background-color: white;
+	padding: 20px;
+	border: 1px solid #d7dde3;
+	border-radius: 14px;
+	box-shadow: 0 8px 18px rgba(31, 41, 51, 0.08);
+}
+
+/* Carousel box that hides the extra images outside the frame */
+.carousel {
+	overflow: hidden;
+	width: 100%;
+	border: 1px solid #ccd4db;
+	margin-bottom: 20px;
+	background-color: #f8fafc;
+	border-radius: 12px;
+}
+
+/* Holds all carousel slides in one row and animates them */
+.carousel-track {
+	display: flex;
+	width: 400%;
+	animation: slide 12s infinite;
+}
+
+/* Makes each slide take up one full view area in the carousel */
+.slide {
+	flex: 0 0 25%;
+	max-width: 25%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px;
+	box-sizing: border-box;
+}
+
+/* Sizes the pictures so they stay visible without heavy cropping */
+.carousel-track img {
+	width: 100%;
+	height: clamp(260px, 36vw, 420px);
+	object-fit: contain;
+	object-position: center;
+	display: block;
+}
+
+/* Makes the dashcam video fill the card neatly */
+.video-box {
+	width: 100%;
+	border-radius: 12px;
+	background-color: #000;
+}
+
+/* Stacks the form fields vertically with spacing */
+.accident-form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+/* Gives all form controls matching spacing and font */
+.accident-form input,
+.accident-form select,
+.accident-form textarea,
+.accident-form button {
+	padding: 10px;
+	font: inherit;
+}
+
+/* Styles the submit button */
+.accident-form button {
+	border: none;
+	border-radius: 8px;
+	background-color: #1d5c93;
+	color: white;
+}
+
+
+/*
+	Carousel animation with 4 slides
+	0% to 20% shows slide 1 
+	25% to 45% shows slide 2 
+	50% to 70% shows slide 3 
+	75% to 95% shows slide 4 
+	100% resets to slide 1 for an image loop
+    
+    20% for each slide and 5% for each transition
+*/
+@keyframes slide {
+	/* Slide 1 stays in view */
+	0%,
+	20% {
+		transform: translateX(0);
+	}
+
+	/* Slide 2 stays in view */
+	25%,
+	45% {
+		transform: translateX(-25%);
+	}
+
+	/* Slide 3 stays in view */
+	50%,
+	70% {
+		transform: translateX(-50%);
+	}
+
+	/* Slide 4 stays in view */
+	75%,
+	95% {
+		transform: translateX(-75%);
+	}
+
+	/* Loop back to the first slide */
+	100% {
+		transform: translateX(0);
+	}
+}

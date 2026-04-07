@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Car Accident Page</title>
+	<link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Car Accident Page</h1>
+
+		<div class="layout">
+			<div class="section">
+				<h2>Damage Pictures</h2>
+				<div class="carousel">
+					<div class="carousel-track">
+						<div class="slide">
+							<img src="Whitecar1.jpeg" alt="White car damage.">
+						</div>
+						<div class="slide">
+							<img src="Whitecar2.jpeg" alt="More white car damage.">
+						</div>
+						<div class="slide">
+							<img src="Redcar1.jpeg" alt="Red car damage.">
+						</div>
+						<div class="slide">
+							<img src="Redcar2.jpeg" alt="More red car damage.">
+						</div>
+					</div>
+				</div>
+
+				<h2>Dashcam Video</h2>
+				<video controls class="video-box">
+					<source src="CrashDashCam.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+			</div>
+
+			<div class="section">
+				<h2>Accident Form</h2>
+				<form class="accident-form" action="#" method="post">
+					<label for="name">Name</label>
+					<input type="text" id="name" name="name">
+
+					<label for="date">Date</label>
+					<input type="date" id="date" name="date">
+
+					<label for="car">Car Color</label>
+					<select id="car" name="car">
+						<option value="">Select one</option>
+						<option value="white">White</option>
+						<option value="red">Red</option>
+						<option value="black">Black</option>
+					</select>
+
+					<label for="damage">Damage Area</label>
+					<select id="damage" name="damage">
+						<option value="">Select one</option>
+						<option value="front">Front</option>
+						<option value="side">Side</option>
+						<option value="rear">Rear</option>
+					</select>
+
+					<label for="details">What happened?</label>
+					<textarea id="details" name="details" rows="4"></textarea>
+
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
